@@ -89,11 +89,21 @@ Sudoku is a puzzle that involves 81 squares arranged in a 9X9 array.
 Each locus in the array can be empty (i.e. `None`, null) or contain a digit `1-9`.
 In order to be considered a solution, each square must contain a digit as well as 27 other constraints met:
 
-+ Each of the 9 rows must contain one each of the 1-9
-+ Each of the 9 columns must contain one each of the 1-9
-+ Each of the 9 3X3 sub-grids must contain one each of the 1-9
++ Each of the 9 rows must contain one each of 1-9
++ Each of the 9 columns must contain one each of 1-9
++ Each of the 9 3X3 sub-grids must contain one each the 1-9
 
-A fresh puzzle is given partially filled in constraining the solution to be compatible with the given values.
+`TODO: insert image`
+ 
+A fresh puzzle is given as incompletely filled in with the usual expectation that there is a unique solution. Each incompletely filled in 9X9 grid can either have:
+
+* a unique solution `1`
+* more than one solution `> 1`
+* no solutions `{}`
+
+_This is reminiscent of the classic linear algebra problem of n unknowns and m equations._
+ 
+[Wikipedia: Mathematics of Sudoku](https://en.wikipedia.org/wiki/Mathematics_of_Sudoku)
 
 ### Puzzle State Representation
 
@@ -125,6 +135,16 @@ Note: This algorithm is essentially a depth-first, rollback similar to **Knuth's
 
 ## Results
 
+|puzzle|solve time (seconds)| number of iterations|
+|------|---------|----|
+|empty| 0.27 | 291 |
+|easy | 0.039  | 20  |
+|medium|0.087  | 72  |
+|hard  |14.51 | 15682  |
+|hardest|37.25|38380|
+
+It is satisfying that they are ranked intuitively by solve time. There is probably a puzzle that could be designed to be a really bad scenario for this algorithm.
+
 ### The Empty Puzzle
 
 Turns out the simple algorithm is really fast at finding a solution to the empty puzzle.
@@ -134,12 +154,6 @@ Turns out the simple algorithm is really fast at finding a solution to the empty
 ### Hard
 ### Hardest?
 
-```
->>>
->>>
->>>
-
-```
 ## Discussion Puzzle Complexity
 If we begin with only the 9 X 9 matrix that can contain None-9, there are
 
@@ -162,58 +176,6 @@ Out: 256.7639251168273
 
 print(str(math.ceil(math.log2(math.factorial(9)**9))) + ' bits')
 >> 167 bits
-
-s0 = [[None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None],
-     [None, None, None, None, None, None, None, None, None]]
-
-sf = [[8, None, None, None, None, None, None, None, None],
-     [None, None, 3, 6, None, None, None, None, None],
-     [None, 7, None, None, 9, None, 2, None, None],
-     [None, 5, None, None, None, 7, None, None, None],
-     [None, None, None, None, 4, 5, 7, None, None],
-     [None, None, None, 1, None, None, None, 3, None],
-     [None, None, 1, None, None, None, None, 6, 8],
-     [None, None, 8, 5, None, None, None, 1, None],
-     [None, 9, None, None, None, None, 4, None, None]]
-
-s1 = [[7, None, None, 1, None, None, None, None, 8],
-     [None, 3, 6, 2, None, 8, 7, None, None],
-     [8, None, 4, None, 6, None, None, None, None],
-     [None, 8, None, None, 5, None, 2, 1, None],
-     [None, None, 2, 4, None, 7, 3, None, None],
-     [None, 9, 1, None, 8, None, None, 7, None],
-     [None, None, None, None, 9, None, 8, None, 5],
-     [None, None, 8, 5, None, 3, 6, 9, None],
-     [5, None, None, None, None, 4, None, None, 7]]
-
-s2 = [[None, 9, None, None, 6, 1, None, 3, None],
-     [None, None, 6, 3, None, None, None, 1, None],
-     [4, None, None, None, None, None, 9, None, 8],
-     [None, None, None, None, None, 9, 3, 5, 1],
-     [None, None, None, None, 8, None, None, None, None],
-     [2, 5, 1, 6, None, None, None, None, None],
-     [3, None, 9, None, None, None, None, None, 5],
-     [None, 4, None, None, None, 6, 2, None, None],
-     [None, 7, None, 5, 2, None, None, 9, None]]
-
-s3 = [[3, None, None, 6, None, None, 4, None, None],
-     [None, 6, None, None, None, None, None, 2, None],
-     [None, None, 2, 8, None, None, 5, None, 6],
-     [4, None, None, None, 8, None, 2, 6, None],
-     [None, None, None, 7, None, 3, None, None, None],
-     [None, 9, 1, None, 6, None, None, None, 5],
-     [6, None, 9, None, None, 2, 3, None, None],
-     [None, 8, None, None, None, None, None, 1, None],
-     [None, None, 7, None, None, 8, None, None, 4]]
-
-puzzle_dict = {'s1': s1, 's0': s0, 's3': s3, 's2':s2}
 ```
 
 
