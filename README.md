@@ -1,9 +1,48 @@
 # Sudoku Solver
+
+A basic sudoku solver algorithm for learning and fun.
 ## Use
+
+* solve_sudoku.py
+  * contains all supporting functions
+  * run as main
+
+
+* puzzle_set.py
+  * contains a dictionary of 5 test puzzles
+    * empty: empty puzzle
+    * easy: easy according to _United Airlines in-flight magazine_
+    * medium: medium according to _United Airlines in-flight magazine_
+    * hard: hard according to_United Airlines in-flight magazine_
+    * hardest: allegedly **The Worlds Hardest Sudoku Puzzle** according to this
+    [Gizmodo article](https://gizmodo.com/can-you-solve-the-10-hardest-logic-puzzles-ever-created-1064112665)
+
+```console
+$ python solve_sudoku.py
+empty, easy, medium, hard, or hardest?: easy
+Solving...
+[7, None, None, 1, None, None, None, None, 8]
+[None, 3, 6, 2, None, 8, 7, None, None]
+[8, None, 4, None, 6, None, None, None, None]
+[None, 8, None, None, 5, None, 2, 1, None]
+[None, None, 2, 4, None, 7, 3, None, None]
+[None, 9, 1, None, 8, None, None, 7, None]
+[None, None, None, None, 9, None, 8, None, 5]
+[None, None, 8, 5, None, 3, 6, 9, None]
+[5, None, None, None, None, 4, None, None, 7]
+Time to Complete: 0.03936266899108887
+Number of Iterations: 20
+[7, 2, 5, 1, 3, 9, 4, 6, 8]
+[9, 3, 6, 2, 4, 8, 7, 5, 1]
+[8, 1, 4, 7, 6, 5, 9, 2, 3]
+[3, 8, 7, 9, 5, 6, 2, 1, 4]
+[6, 5, 2, 4, 1, 7, 3, 8, 9]
+[4, 9, 1, 3, 8, 2, 5, 7, 6]
+[2, 7, 3, 6, 9, 1, 8, 4, 5]
+[1, 4, 8, 5, 7, 3, 6, 9, 2]
+[5, 6, 9, 8, 2, 4, 1, 3, 7]
 ```
-Directions for use
-```
-## Dramatic Introduction
+## Potentially Funny Backstory
 
 After finishing the in-flight magazine crossword puzzle together,
 my girlfriend asked me if I knew how Sudoku puzzles worked.
