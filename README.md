@@ -147,12 +147,16 @@ It is satisfying that they are ranked intuitively by solve time. There is probab
 
 ### The Empty Puzzle
 
-Turns out the simple algorithm is really fast at finding a solution to the empty puzzle.
+A solution to the empty puzzle 
 
-### Easy
-### Medium
-### Hard
-### Hardest?
+
+### Comparison to Biological Computer
+
+It just so happens the copy of my in-flight magazine was once in the possession of a biological Sudoku solver. It gives non-zero information that indeed the hard puzzle is 
+
+As they say:
+
+> n of 1 is infinitely greater than n of zero
 
 ## Discussion Puzzle Complexity
 If we begin with only the 9 X 9 matrix that can contain None-9, there are
@@ -165,17 +169,29 @@ N0 = 10**81
 # number of possible filled board states:
 N1 = 9**81
 
-# number of possible satisfied 9 row constraints
-N2 = math.factorial(9)*9
+# number of possible satisfied 9 row constraints only
+N2 = math.factorial(9)**9
 
-In: math.log2(10**81)
-Out: 269.07617568587636
+# number of possible satisfied 9 row and 9 col constraints only
+# i.e. "9X9 Latin Squares"
+N3 = math.factorial(9)*math.factorial(8)*?
 
-In: math.log2(9**81)
-Out: 256.7639251168273
+# number of possible Sudoku puzzles
+N4 = ?
+
+```
+
+
+```python
+>>> math.log2(N0)
+269.07617568587636
+>>> math.log2(N1)
+256.7639251168273
+>>> math.log2(N2)
+166.22219717846633
 
 print(str(math.ceil(math.log2(math.factorial(9)**9))) + ' bits')
->> 167 bits
+>>> 167 bits
 ```
 
 
