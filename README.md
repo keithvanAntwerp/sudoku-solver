@@ -42,48 +42,6 @@ Number of Iterations: 20
 [1, 4, 8, 5, 7, 3, 6, 9, 2]
 [5, 6, 9, 8, 2, 4, 1, 3, 7]
 ```
-## Potentially Funny Backstory for 3D Educational Game
-
-After finishing the in-flight magazine crossword puzzle together,
-my friend asked me if I knew how Sudoku puzzles worked.
-I explained the basic idea and she began an attempt to
-solve one of the Sudoku puzzles.
-
-2 minutes she exclaimed:
-
-> This sucks! Crosswords are much more fun and I feel like I may as well be doing expense reports.
-
-I had solved a few easy Sudoku puzzles a few times before and although I didn't share my friend's dreadful opinion of them, 
-I could see her point. While I am sure proficient solvers have sophisticated heuristics that give the puzzle richness and interesting complexity, as naive, average amateurs like us it kind of
-does seem like a tedious accounting problem.  Still, what one human may deem tedious another deems entertaining and to each their own. For others, even if tedious, it is preferred over worrying about the turbulence, the crying child, the claustrophobic conditions, the exposure to higher radiation levels at 35K feet and the potential malicious exploitation of the plane's auto-pilot in an era where everyone, everything and their mother seems to get hacked.
-
-The following sequence of questions filled my mind:
-
-1. Given the well-defined constraints and well-defined structure of the puzzle, how
-difficult would it be to write and implement an algorithm to solve any possible Sudoku puzzle?
-
-2. Could my MacBook Air and my brain's ability to write a Python program be used to solve each of the 3 Sudoku puzzles (Easy, Medium, Hard) in the _United Airlines Hemispheres June 2019_ issue before landing?
-
-3. What if the survival of the **entire flight** depended on a single person accomplishing this feat as in a _90s-fabulous_, hacker-action-_Saw_ movie hybrid? 
-
-    > Hello, do you wanna play a game?
-    
-    _Says Saw the sadistic hacker over the flight intercom as it hijacks the auto-pilot controls only releasing them if an adequate Python algorithm is written to solve each of the 3 puzzles._
-
-4. Ok Well, how many possible 9X9 arrays exist with a single value from the set `{None, 1, 2, 3, 4, 5, 6, 7, 8, 9}` at each location in the array? 
-   
-    `ANSWER = 10**81` or "10 raised to the 81st power"
-
-    _Whoa! That is a large number. A very naive brute force approach would stand no chance.
-    The possibilities are larger than the output space of SHA-256_ i.e. `(10**81 > 2**256)` is `True`
-
-
-
-Cut off from the internet being too broke to justify in-flight Wi-Fi, I could not Google for help. I gazed out at all of the peaceful passengers snoring away the red-eye and the few night owls scrolling their smart phones. A vivid imagination conjured the _Saw_ voice from the in-flight intercom:
-
-> Hello, do you wanna play a game?
-
-So, I spent the remainder of the flight writing a Sudoku Solver under simulated duress.
 
 ## The Essence of the Puzzle
 
@@ -195,6 +153,47 @@ N4 = ?
 print(str(math.ceil(math.log2(math.factorial(9)**9))) + ' bits')
 >>> 167 bits
 ```
+## Potentially Funny Backstory for 3D Educational Game
 
+After finishing the in-flight magazine crossword puzzle together,
+my friend asked me if I knew how Sudoku puzzles worked.
+I explained the basic idea and she began an attempt to
+solve one of the Sudoku puzzles.
+
+2 minutes she exclaimed:
+
+> This sucks! Crosswords are much more fun and I feel like I may as well be doing expense reports.
+
+I had solved a few easy Sudoku puzzles a few times before and although I didn't share my friend's dreadful opinion of them, 
+I could see her point. While I am sure proficient solvers have sophisticated heuristics that give the puzzle richness and interesting complexity, as naive, average amateurs like us it kind of
+does seem like a tedious accounting problem.  Still, what one human may deem tedious another deems entertaining and to each their own. For others, even if tedious, it is preferred over worrying about the turbulence, the crying child, the claustrophobic conditions, the exposure to higher radiation levels at 35K feet and the potential malicious exploitation of the plane's auto-pilot in an era where everyone, everything and their mother seems to get hacked.
+
+The following sequence of questions filled my mind:
+
+1. Given the well-defined constraints and well-defined structure of the puzzle, how
+difficult would it be to write and implement an algorithm to solve any possible Sudoku puzzle?
+
+2. Could my MacBook Air and my brain's ability to write a Python program be used to solve each of the 3 Sudoku puzzles (Easy, Medium, Hard) in the _United Airlines Hemispheres June 2019_ issue before landing?
+
+3. What if the survival of the **entire flight** depended on a single person accomplishing this feat as in a _90s-fabulous_, hacker-action-_Saw_ movie hybrid? 
+
+    > Hello, do you wanna play a game?
+    
+    _Says Saw the sadistic hacker over the flight intercom as it hijacks the auto-pilot controls only releasing them if an adequate Python algorithm is written to solve each of the 3 puzzles._
+
+4. Ok Well, how many possible 9X9 arrays exist with a single value from the set `{None, 1, 2, 3, 4, 5, 6, 7, 8, 9}` at each location in the array? 
+   
+    `ANSWER = 10**81` or "10 raised to the 81st power"
+
+    _Whoa! That is a large number. A very naive brute force approach would stand no chance.
+    The possibilities are larger than the output space of SHA-256_ i.e. `(10**81 > 2**256)` is `True`
+
+
+
+Cut off from the internet being too broke to justify in-flight Wi-Fi, I could not Google for help. I gazed out at all of the peaceful passengers snoring away the red-eye and the few night owls scrolling their smart phones. A vivid imagination conjured the _Saw_ voice from the in-flight intercom:
+
+> Hello, do you wanna play a game?
+
+So, I spent the remainder of the flight writing a Sudoku Solver under simulated duress.
 
 
