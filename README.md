@@ -42,16 +42,18 @@ Number of Iterations: 20
 [1, 4, 8, 5, 7, 3, 6, 9, 2]
 [5, 6, 9, 8, 2, 4, 1, 3, 7]
 ```
-## Potentially Funny Backstory
+## Potentially Funny Backstory for 3D Educational Game
 
 After finishing the in-flight magazine crossword puzzle together,
-my girlfriend asked me if I knew how Sudoku puzzles worked.
+my friend asked me if I knew how Sudoku puzzles worked.
 I explained the basic idea and she began an attempt to
-solve one of the Sudoku puzzles. After about 2 minutes she exclaimed:
+solve one of the Sudoku puzzles.
+
+2 minutes she exclaimed:
 
 > This sucks! Crosswords are much more fun and I feel like I may as well be doing expense reports.
 
-I had solved easy Sudoku puzzles a few times before and although I didn't share my girlfriend's dreadful opinion of them, 
+I had solved a few easy Sudoku puzzles a few times before and although I didn't share my friend's dreadful opinion of them, 
 I could see her point. While I am sure proficient solvers have sophisticated heuristics that give the puzzle richness and interesting complexity, as naive, average amateurs like us it kind of
 does seem like a tedious accounting problem.  Still, what one human may deem tedious another deems entertaining and to each their own. For others, even if tedious, it is preferred over worrying about the turbulence, the crying child, the claustrophobic conditions, the exposure to higher radiation levels at 35K feet and the potential malicious exploitation of the plane's auto-pilot in an era where everyone, everything and their mother seems to get hacked.
 
